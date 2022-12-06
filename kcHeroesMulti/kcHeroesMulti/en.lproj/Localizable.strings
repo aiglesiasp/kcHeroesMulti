@@ -7,3 +7,7 @@
 */
 
 "ENTRAR" = "ENTER";
+"Correo" = "Email";
+"Contraseña" = "Password";
+"¿No tienes cuenta?" = "You don't have account?";
+"Registro" = "Register";
