@@ -24,6 +24,9 @@
 		5BF770A5293E7D0A00FAA323 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF770A8293E7D0A00FAA323 /* Localizable.strings */; };
 		5BF770A6293E7D0A00FAA323 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF770A8293E7D0A00FAA323 /* Localizable.strings */; };
 		5BF770AC293F6E6100FAA323 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770AB293F6E6100FAA323 /* KeyChain.swift */; };
+		5BF770F1293FDA8F00FAA323 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F0293FDA8F00FAA323 /* RootViewModel.swift */; };
+		5BF770F3293FDAC200FAA323 /* StatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F2293FDAC200FAA323 /* StatusModel.swift */; };
+		5BF770F5293FDBDD00FAA323 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F4293FDBDD00FAA323 /* BaseNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		5BF770A7293E7D0A00FAA323 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BF770A9293E7D0B00FAA323 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BF770AB293F6E6100FAA323 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
+		5BF770F0293FDA8F00FAA323 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		5BF770F2293FDAC200FAA323 /* StatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusModel.swift; sourceTree = "<group>"; };
+		5BF770F4293FDBDD00FAA323 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,7 @@
 		5BF77093293E7B1300FAA323 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5BF770F0293FDA8F00FAA323 /* RootViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 		5BF77096293E7B2700FAA323 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5BF770F4293FDBDD00FAA323 /* BaseNetwork.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,6 +194,7 @@
 		5BF77097293E7B3100FAA323 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5BF770F2293FDAC200FAA323 /* StatusModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,6 +357,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BF77069293E79E900FAA323 /* kcHeroesMulti.xcdatamodeld in Sources */,
+				5BF770F3293FDAC200FAA323 /* StatusModel.swift in Sources */,
+				5BF770F1293FDA8F00FAA323 /* RootViewModel.swift in Sources */,
+				5BF770F5293FDBDD00FAA323 /* BaseNetwork.swift in Sources */,
 				5BF770AC293F6E6100FAA323 /* KeyChain.swift in Sources */,
 				5BF77064293E79E900FAA323 /* kcHeroesMultiApp.swift in Sources */,
 				5BF7706B293E79E900FAA323 /* ContentView.swift in Sources */,

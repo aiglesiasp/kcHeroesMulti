@@ -9,12 +9,16 @@ import SwiftUI
 
 @main
 struct kcHeroesMultiApp: App {
-    let persistenceController = PersistenceController.shared
+    //let persistenceController = PersistenceController.shared
+    @StateObject var rootViewModel = RootViewModel()
 
     var body: some Scene {
         WindowGroup {
             LoginView()
+                .environmentObject(rootViewModel)
+           /* LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            */
         }
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
+    @EnvironmentObject private var rootViewModel: RootViewModel
+    
     @State private var email = ""
     @State private var password = ""
     @State private var animationAmounth = 1.0
@@ -33,7 +35,7 @@ struct LoginView: View {
                     .frame(width: 300)
                     .opacity(0.8)
                     .padding(.top, 160) //padding desde posicion central
-                
+                Spacer()
                 //MARK: Añadiendo cuadro con TextFields
                 VStack {
                     //PARA EL EMAIL
@@ -43,7 +45,7 @@ struct LoginView: View {
                         .background(.white)
                         .foregroundColor(Color.blue)
                         .cornerRadius(20.0)
-                        .shadow(radius: 2.0, x:10, y:10) //dar sombra
+                        .shadow(radius: 1.0, x:10, y:10) //dar sombra
                         //.autocapitalization(.none) //antes de iOS16
                         .textInputAutocapitalization(.never) //ioS16
                         //.disableAutocorrection(true) //antes de iOS16
@@ -57,7 +59,7 @@ struct LoginView: View {
                         .background(.white)
                         .foregroundColor(Color.blue)
                         .cornerRadius(20.0)
-                        .shadow(radius: 2.0, x:10, y:10)
+                        .shadow(radius: 1.0, x:10, y:10)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                         .opacity(0.8)
@@ -65,7 +67,8 @@ struct LoginView: View {
                     
                     //MARK: Agrego el boton de Usuario
                     Button {
-                        //TODO: Login en el viemodel
+                        //Login en el viemodel
+                        rootViewModel.login(user: email, password: password)
                     } label: {
                         Text("ENTRAR")
                             //.font(.title2)
@@ -76,7 +79,7 @@ struct LoginView: View {
                             .frame(width: 300, height: 50)
                             .background(Color(.blue))
                             .cornerRadius(20)
-                            .shadow(radius: 10.0, x:10, y:10)
+                            .shadow(radius: 1.0, x:10, y:10)
                     }
                     .padding(.top, 50)
                     .opacity(0.8)
