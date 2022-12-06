@@ -39,6 +39,7 @@ struct LoginView: View {
                     //PARA EL EMAIL
                     TextField("Correo", text: $email)
                         .padding()
+                        .font(.custom("", size: 18))
                         .background(.white)
                         .foregroundColor(Color.blue)
                         .cornerRadius(20.0)
@@ -52,6 +53,7 @@ struct LoginView: View {
                     //PARA EL PASSWORD
                     SecureField("Contraseña", text: $password)
                         .padding()
+                        .font(.custom("", size: 18))
                         .background(.white)
                         .foregroundColor(Color.blue)
                         .cornerRadius(20.0)
@@ -66,7 +68,9 @@ struct LoginView: View {
                         //TODO: Login en el viemodel
                     } label: {
                         Text("ENTRAR")
-                            .font(.title2)
+                            //.font(.title2)
+                            .font(.custom("", size: 25))
+                            .bold()
                             .foregroundColor(.white)
                             .padding()
                             .frame(width: 300, height: 50)
