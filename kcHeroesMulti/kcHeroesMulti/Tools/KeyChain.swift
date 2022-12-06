@@ -7,6 +7,7 @@
 
 import KeychainSwift
 //MARK: FUNCION SAVE
+@discardableResult
 func saveKC(key: String, value: String) -> Bool {
     if let data = value.data(using: .utf8) {
         let keychain = KeychainSwift()

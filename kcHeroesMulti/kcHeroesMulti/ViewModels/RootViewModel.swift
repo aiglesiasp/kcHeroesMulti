@@ -8,11 +8,18 @@
 import Foundation
 import Combine
 
+public let CONST_TOKEN_ID = "tokenJWTKeyChainIOSSuperpoderes"
+
 final class RootViewModel: ObservableObject {
     //Propiedad estado
     @Published var status = Status.none
     //Para guardar el token
-    @Published var tokenJWT: String = ""
+    @Published var tokenJWT: String = "" {
+        didSet {
+            saveKC(key: CONST_TOKEN_ID, value: tokenJWT) //persisitido en keychain
+            print("Token: \(tokenJWT)")
+        }
+    }
     //Creo el suscriptor porque voy a usar Combine
     private var suscriptors = Set<AnyCancellable>()
     
@@ -41,7 +48,6 @@ final class RootViewModel: ObservableObject {
                 }
             } receiveValue: { token in
                 self.tokenJWT = token
-                print("Token: \(token)")
             }
             .store(in: &suscriptors)
 
