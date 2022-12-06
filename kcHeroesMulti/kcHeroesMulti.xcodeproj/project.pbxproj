@@ -23,6 +23,7 @@
 		5BF770A4293E7D0A00FAA323 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF770A8293E7D0A00FAA323 /* Localizable.strings */; };
 		5BF770A5293E7D0A00FAA323 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF770A8293E7D0A00FAA323 /* Localizable.strings */; };
 		5BF770A6293E7D0A00FAA323 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF770A8293E7D0A00FAA323 /* Localizable.strings */; };
+		5BF770AC293F6E6100FAA323 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770AB293F6E6100FAA323 /* KeyChain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		5BF77099293E7B8A00FAA323 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5BF770A7293E7D0A00FAA323 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BF770A9293E7D0B00FAA323 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5BF770AB293F6E6100FAA323 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		5BF77095293E7B2100FAA323 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				5BF770AB293F6E6100FAA323 /* KeyChain.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BF77069293E79E900FAA323 /* kcHeroesMulti.xcdatamodeld in Sources */,
+				5BF770AC293F6E6100FAA323 /* KeyChain.swift in Sources */,
 				5BF77064293E79E900FAA323 /* kcHeroesMultiApp.swift in Sources */,
 				5BF7706B293E79E900FAA323 /* ContentView.swift in Sources */,
 				5BF7709A293E7B8A00FAA323 /* LoginView.swift in Sources */,
