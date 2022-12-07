@@ -22,13 +22,14 @@ struct HTTPMethods {
 //Endpoints
 enum endpoints: String {
     case login = "/api/auth/login"
+    case herosList = "/api/heros/all"
 }
 
 //CREO EL REQUEST A LAS LLAMADAS
 struct BaseNetwork {
     
     
-    //PARA GENERAR EL LOGIN
+    //MARK: PARA GENERAR EL LOGIN
     func getSessionLogin(user: String, password: String) -> URLRequest {
         //Montamos la cadena URL
         let urlCad: String = "\(server)\(endpoints.login.rawValue)"
@@ -46,6 +47,25 @@ struct BaseNetwork {
         request.httpMethod = HTTPMethods.post
         request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
         request.addValue(segCredential, forHTTPHeaderField: "Authorization")
+        
+        return request
+    }
+    
+    //MARK: FUNCION OBTENER HEROES
+    func getSessionHeros(filter: String) -> URLRequest {
+        //Montamos la cadena URL
+        let urlCad: String = "\(server)\(endpoints.herosList.rawValue)"
+        //Creamos la REQUEST
+        var request = URLRequest(url: URL(string: urlCad)!)
+        request.httpMethod = HTTPMethods.post
+        //Genero el JSON de la request
+        request.httpBody = try? JSONEncoder().encode(HerosFilter(name: filter))
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
+        //Seguridad token
+        let token = loadKC(key: CONST_TOKEN_ID)
+        if let tokenJWT = token {
+            request.addValue("Beares \(tokenJWT)", forHTTPHeaderField: "Authorization")
+        }
         
         return request
     }

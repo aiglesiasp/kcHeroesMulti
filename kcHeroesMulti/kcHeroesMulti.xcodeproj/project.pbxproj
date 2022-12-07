@@ -19,7 +19,6 @@
 		5BF7709A293E7B8A00FAA323 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF77099293E7B8A00FAA323 /* LoginView.swift */; };
 		5BF7709B293E7B8A00FAA323 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF77099293E7B8A00FAA323 /* LoginView.swift */; };
 		5BF7709C293E7B8A00FAA323 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF77099293E7B8A00FAA323 /* LoginView.swift */; };
-		5BF7709F293E7BD600FAA323 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5BF7709E293E7BD600FAA323 /* KeychainSwift */; };
 		5BF770A4293E7D0A00FAA323 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF770A8293E7D0A00FAA323 /* Localizable.strings */; };
 		5BF770A5293E7D0A00FAA323 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF770A8293E7D0A00FAA323 /* Localizable.strings */; };
 		5BF770A6293E7D0A00FAA323 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BF770A8293E7D0A00FAA323 /* Localizable.strings */; };
@@ -32,6 +31,11 @@
 		5BF770FC2940D59700FAA323 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770FB2940D59700FAA323 /* LoaderView.swift */; };
 		5BF770FE2940D71D00FAA323 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770FD2940D71D00FAA323 /* ErrorView.swift */; };
 		5BF7710129410B6000FAA323 /* PrincipalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7710029410B6000FAA323 /* PrincipalView.swift */; };
+		5BF7710329410D8E00FAA323 /* HerosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7710229410D8E00FAA323 /* HerosModel.swift */; };
+		5BF7710529410FDF00FAA323 /* viewModelHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7710429410FDF00FAA323 /* viewModelHeros.swift */; };
+		5BF771082941131A00FAA323 /* HerosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF771072941131A00FAA323 /* HerosView.swift */; };
+		5BF7710A2941143900FAA323 /* HerosRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF771092941143900FAA323 /* HerosRowView.swift */; };
+		5BF7711029411EB400FAA323 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5BF7710F29411EB400FAA323 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +81,10 @@
 		5BF770FB2940D59700FAA323 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		5BF770FD2940D71D00FAA323 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		5BF7710029410B6000FAA323 /* PrincipalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrincipalView.swift; sourceTree = "<group>"; };
+		5BF7710229410D8E00FAA323 /* HerosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosModel.swift; sourceTree = "<group>"; };
+		5BF7710429410FDF00FAA323 /* viewModelHeros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModelHeros.swift; sourceTree = "<group>"; };
+		5BF771072941131A00FAA323 /* HerosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosView.swift; sourceTree = "<group>"; };
+		5BF771092941143900FAA323 /* HerosRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF7709F293E7BD600FAA323 /* KeychainSwift in Frameworks */,
+				5BF7711029411EB400FAA323 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF770F0293FDA8F00FAA323 /* RootViewModel.swift */,
+				5BF7710429410FDF00FAA323 /* viewModelHeros.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -209,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF770F2293FDAC200FAA323 /* StatusModel.swift */,
+				5BF7710229410D8E00FAA323 /* HerosModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -242,9 +252,19 @@
 		5BF770FF29410B4E00FAA323 /* Principal */ = {
 			isa = PBXGroup;
 			children = (
+				5BF771062941130E00FAA323 /* Heros */,
 				5BF7710029410B6000FAA323 /* PrincipalView.swift */,
 			);
 			path = Principal;
+			sourceTree = "<group>";
+		};
+		5BF771062941130E00FAA323 /* Heros */ = {
+			isa = PBXGroup;
+			children = (
+				5BF771072941131A00FAA323 /* HerosView.swift */,
+				5BF771092941143900FAA323 /* HerosRowView.swift */,
+			);
+			path = Heros;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +284,7 @@
 			);
 			name = kcHeroesMulti;
 			packageProductDependencies = (
-				5BF7709E293E7BD600FAA323 /* KeychainSwift */,
+				5BF7710F29411EB400FAA323 /* KeychainSwift */,
 			);
 			productName = kcHeroesMulti;
 			productReference = 5BF77060293E79E900FAA323 /* kcHeroesMulti.app */;
@@ -340,7 +360,7 @@
 			);
 			mainGroup = 5BF77057293E79E800FAA323;
 			packageReferences = (
-				5BF7709D293E7BD500FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				5BF7710E29411EB400FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 5BF77061293E79E900FAA323 /* Products */;
 			projectDirPath = "";
@@ -390,6 +410,7 @@
 				5BF77069293E79E900FAA323 /* kcHeroesMulti.xcdatamodeld in Sources */,
 				5BF770F92940D13100FAA323 /* rootView.swift in Sources */,
 				5BF770F3293FDAC200FAA323 /* StatusModel.swift in Sources */,
+				5BF7710329410D8E00FAA323 /* HerosModel.swift in Sources */,
 				5BF770F1293FDA8F00FAA323 /* RootViewModel.swift in Sources */,
 				5BF770F5293FDBDD00FAA323 /* BaseNetwork.swift in Sources */,
 				5BF7710129410B6000FAA323 /* PrincipalView.swift in Sources */,
@@ -398,6 +419,9 @@
 				5BF77064293E79E900FAA323 /* kcHeroesMultiApp.swift in Sources */,
 				5BF7706B293E79E900FAA323 /* ContentView.swift in Sources */,
 				5BF7709A293E7B8A00FAA323 /* LoginView.swift in Sources */,
+				5BF771082941131A00FAA323 /* HerosView.swift in Sources */,
+				5BF7710A2941143900FAA323 /* HerosRowView.swift in Sources */,
+				5BF7710529410FDF00FAA323 /* viewModelHeros.swift in Sources */,
 				5BF770F72940CD1200FAA323 /* PropertyWrappers.swift in Sources */,
 				5BF770FE2940D71D00FAA323 /* ErrorView.swift in Sources */,
 				5BF77066293E79E900FAA323 /* Persistence.swift in Sources */,
@@ -760,7 +784,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5BF7709D293E7BD500FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+		5BF7710E29411EB400FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
 			requirement = {
@@ -771,9 +795,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5BF7709E293E7BD600FAA323 /* KeychainSwift */ = {
+		5BF7710F29411EB400FAA323 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5BF7709D293E7BD500FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			package = 5BF7710E29411EB400FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

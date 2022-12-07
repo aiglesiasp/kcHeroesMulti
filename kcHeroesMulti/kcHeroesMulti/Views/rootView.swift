@@ -22,7 +22,7 @@ struct rootView: View {
         case Status.error(error: let errorString):
             ErrorView(textError: errorString)
         case Status.loaded:
-            Text("Login OK, cargamos la HOME")
+            PrincipalView()
         }
     }
 }

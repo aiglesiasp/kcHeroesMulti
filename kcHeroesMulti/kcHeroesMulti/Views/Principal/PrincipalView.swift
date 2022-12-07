@@ -9,9 +9,18 @@ import SwiftUI
 
 struct PrincipalView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            VStack {
+                HerosView(viewModel: viewModelHeros())
+            }
+            .tabItem {
+                    Image(systemName: "house")
+                    Text("Heroes")
+            }
+        }
     }
 }
+
 
 struct PrincipalView_Previews: PreviewProvider {
     static var previews: some View {
