@@ -29,6 +29,8 @@
 		5BF770F5293FDBDD00FAA323 /* BaseNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F4293FDBDD00FAA323 /* BaseNetwork.swift */; };
 		5BF770F72940CD1200FAA323 /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F62940CD1200FAA323 /* PropertyWrappers.swift */; };
 		5BF770F92940D13100FAA323 /* rootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F82940D13100FAA323 /* rootView.swift */; };
+		5BF770FC2940D59700FAA323 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770FB2940D59700FAA323 /* LoaderView.swift */; };
+		5BF770FE2940D71D00FAA323 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770FD2940D71D00FAA323 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		5BF770F4293FDBDD00FAA323 /* BaseNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNetwork.swift; sourceTree = "<group>"; };
 		5BF770F62940CD1200FAA323 /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
 		5BF770F82940D13100FAA323 /* rootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rootView.swift; sourceTree = "<group>"; };
+		5BF770FB2940D59700FAA323 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		5BF770FD2940D71D00FAA323 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 		5BF77094293E7B1A00FAA323 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5BF770FA2940D58900FAA323 /* Tools */,
 				5BF77098293E7B6C00FAA323 /* Login */,
 				5BF770F82940D13100FAA323 /* rootView.swift */,
 			);
@@ -209,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF77099293E7B8A00FAA323 /* LoginView.swift */,
+				5BF770FD2940D71D00FAA323 /* ErrorView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -220,6 +226,14 @@
 				5BF7706A293E79E900FAA323 /* ContentView.swift */,
 			);
 			path = old;
+			sourceTree = "<group>";
+		};
+		5BF770FA2940D58900FAA323 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5BF770FB2940D59700FAA323 /* LoaderView.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,11 +381,13 @@
 				5BF770F3293FDAC200FAA323 /* StatusModel.swift in Sources */,
 				5BF770F1293FDA8F00FAA323 /* RootViewModel.swift in Sources */,
 				5BF770F5293FDBDD00FAA323 /* BaseNetwork.swift in Sources */,
+				5BF770FC2940D59700FAA323 /* LoaderView.swift in Sources */,
 				5BF770AC293F6E6100FAA323 /* KeyChain.swift in Sources */,
 				5BF77064293E79E900FAA323 /* kcHeroesMultiApp.swift in Sources */,
 				5BF7706B293E79E900FAA323 /* ContentView.swift in Sources */,
 				5BF7709A293E7B8A00FAA323 /* LoginView.swift in Sources */,
 				5BF770F72940CD1200FAA323 /* PropertyWrappers.swift in Sources */,
+				5BF770FE2940D71D00FAA323 /* ErrorView.swift in Sources */,
 				5BF77066293E79E900FAA323 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

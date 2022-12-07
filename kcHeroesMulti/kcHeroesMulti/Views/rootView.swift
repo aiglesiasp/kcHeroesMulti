@@ -18,9 +18,9 @@ struct rootView: View {
         case Status.register:
             Text("vista registro")
         case Status.loading:
-            Text("Vista loading")
+            LoaderView()
         case Status.error(error: let errorString):
-            Text("error viene: \(errorString)")
+            ErrorView(textError: errorString)
         case Status.loaded:
             Text("Login OK, cargamos la HOME")
         }
