@@ -14,7 +14,7 @@ struct kcHeroesMultiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            rootView()
                 .environmentObject(rootViewModel)
            /* LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)

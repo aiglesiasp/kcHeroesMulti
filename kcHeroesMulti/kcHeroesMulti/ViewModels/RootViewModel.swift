@@ -18,7 +18,11 @@ final class RootViewModel: ObservableObject {
     
     //MARK: KeyChain
     @kcPersistenceKeyChain(key: CONST_TOKEN_ID)
-    var tokenJWT
+    var tokenJWT {
+        didSet {
+            print("me asignan: \(tokenJWT)")
+        }
+    }
     
     //MARK: inicializador
     init() {
