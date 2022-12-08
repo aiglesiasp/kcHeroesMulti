@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B124AAB29427E6900C993B7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B124AAA29427E6900C993B7 /* KeychainSwift */; };
+		5B577E50294277480050E8CA /* rootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F82940D13100FAA323 /* rootView.swift */; };
+		5B577E51294277490050E8CA /* rootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F82940D13100FAA323 /* rootView.swift */; };
 		5BF77064293E79E900FAA323 /* kcHeroesMultiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF77063293E79E900FAA323 /* kcHeroesMultiApp.swift */; };
 		5BF77066293E79E900FAA323 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF77065293E79E900FAA323 /* Persistence.swift */; };
 		5BF77069293E79E900FAA323 /* kcHeroesMulti.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BF77067293E79E900FAA323 /* kcHeroesMulti.xcdatamodeld */; };
@@ -35,7 +38,6 @@
 		5BF7710529410FDF00FAA323 /* viewModelHeros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7710429410FDF00FAA323 /* viewModelHeros.swift */; };
 		5BF771082941131A00FAA323 /* HerosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF771072941131A00FAA323 /* HerosView.swift */; };
 		5BF7710A2941143900FAA323 /* HerosRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF771092941143900FAA323 /* HerosRowView.swift */; };
-		5BF7711029411EB400FAA323 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5BF7710F29411EB400FAA323 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BF7711029411EB400FAA323 /* KeychainSwift in Frameworks */,
+				5B124AAB29427E6900C993B7 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +286,7 @@
 			);
 			name = kcHeroesMulti;
 			packageProductDependencies = (
-				5BF7710F29411EB400FAA323 /* KeychainSwift */,
+				5B124AAA29427E6900C993B7 /* KeychainSwift */,
 			);
 			productName = kcHeroesMulti;
 			productReference = 5BF77060293E79E900FAA323 /* kcHeroesMulti.app */;
@@ -334,7 +336,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					5BF7705F293E79E900FAA323 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -360,7 +362,7 @@
 			);
 			mainGroup = 5BF77057293E79E800FAA323;
 			packageReferences = (
-				5BF7710E29411EB400FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				5B124AA929427E6900C993B7 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 5BF77061293E79E900FAA323 /* Products */;
 			projectDirPath = "";
@@ -433,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BF7709B293E7B8A00FAA323 /* LoginView.swift in Sources */,
+				5B577E50294277480050E8CA /* rootView.swift in Sources */,
 				5BF7707B293E79EB00FAA323 /* kcHeroesMultiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B577E51294277490050E8CA /* rootView.swift in Sources */,
 				5BF7709C293E7B8A00FAA323 /* LoginView.swift in Sources */,
 				5BF77087293E79EB00FAA323 /* kcHeroesMultiUITestsLaunchTests.swift in Sources */,
 				5BF77085293E79EB00FAA323 /* kcHeroesMultiUITests.swift in Sources */,
@@ -479,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -508,6 +513,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -537,6 +543,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -566,6 +573,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -590,8 +598,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = kcHeroesMulti/kcHeroesMulti.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"kcHeroesMulti/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -626,8 +636,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = kcHeroesMulti/kcHeroesMulti.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"kcHeroesMulti/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -663,6 +675,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -685,6 +698,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -706,6 +720,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -727,6 +742,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MACOSX_DEPLOYMENT_TARGET = 12.3;
@@ -784,7 +800,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5BF7710E29411EB400FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+		5B124AA929427E6900C993B7 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
 			requirement = {
@@ -795,9 +811,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5BF7710F29411EB400FAA323 /* KeychainSwift */ = {
+		5B124AAA29427E6900C993B7 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5BF7710E29411EB400FAA323 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			package = 5B124AA929427E6900C993B7 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
