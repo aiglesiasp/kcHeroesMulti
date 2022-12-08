@@ -12,7 +12,7 @@ struct LoginView: View {
     
 #if DEBUG
     @State private var email = "aiglesiaspubill@gmail.com"
-    @State private var password = "19871989aA"
+    @State private var password = ""
 #else
     @State private var email = ""
     @State private var password = ""
