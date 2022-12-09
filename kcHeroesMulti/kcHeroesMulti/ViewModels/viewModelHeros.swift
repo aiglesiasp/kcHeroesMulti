@@ -22,8 +22,17 @@ final class viewModelHeros: ObservableObject {
         }
     }
     
+    //IR CANCELANDO SUSCRIPTORES
+    func cancelAll() {
+        suscriptors.forEach { AnyCancellable in
+            AnyCancellable.cancel()
+        }
+    }
+    
     //FUNCION PARA DATOS HEROES REALES
     func getHeros(filter: String) {
+        //voy cancelando suscriptores
+        cancelAll()
         //Combine para traer heroes
         self.status = .loading
         
