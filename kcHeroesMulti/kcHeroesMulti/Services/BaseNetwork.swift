@@ -64,7 +64,7 @@ struct BaseNetwork {
         //Seguridad token
         let token = loadKC(key: CONST_TOKEN_ID)
         if let tokenJWT = token {
-            request.addValue("Beares \(tokenJWT)", forHTTPHeaderField: "Authorization")
+            request.addValue("Bearer \(tokenJWT)", forHTTPHeaderField: "Authorization")
         }
         
         return request

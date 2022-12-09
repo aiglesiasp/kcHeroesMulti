@@ -16,6 +16,7 @@ struct HerosView: View {
                 if let heros = viewModel.heros {
                     ForEach(heros) { hero in
                         NavigationLink {
+                            //Pantalla del detalle
                             Text("\(hero.name)")
                         } label: {
                             //Detalle de la row

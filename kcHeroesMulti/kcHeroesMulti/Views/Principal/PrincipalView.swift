@@ -10,13 +10,11 @@ import SwiftUI
 struct PrincipalView: View {
     var body: some View {
         TabView {
-            VStack {
-                HerosView(viewModel: viewModelHeros())
-            }
-            .tabItem {
+            HerosView(viewModel: viewModelHeros())
+                .tabItem {
                     Image(systemName: "house")
                     Text("Heroes")
-            }
+                }
         }
     }
 }

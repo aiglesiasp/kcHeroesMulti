@@ -254,8 +254,8 @@
 		5BF770FF29410B4E00FAA323 /* Principal */ = {
 			isa = PBXGroup;
 			children = (
-				5BF771062941130E00FAA323 /* Heros */,
 				5BF7710029410B6000FAA323 /* PrincipalView.swift */,
+				5BF771062941130E00FAA323 /* Heros */,
 			);
 			path = Principal;
 			sourceTree = "<group>";

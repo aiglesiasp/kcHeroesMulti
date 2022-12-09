@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "46C348DD-5C2C-4EC9-9BC5-EB08DDB6FB33"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DEDB691-2546-4A2E-B71A-3A8662B5488C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kcHeroesMulti/Views/rootView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E393098-2FCE-4723-944E-5511263F67B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kcHeroesMulti/Views/rootView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76EC8937-C63E-40AF-BAB9-419C4C16987D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kcHeroesMulti/Views/rootView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3CD06E7-A1C2-4553-AC3B-D22BACE95D06"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kcHeroesMulti/Views/rootView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE0A6097-BAE4-4088-9125-3F49ECE3E85C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kcHeroesMulti/Views/Principal/Heros/HerosView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "CE0A6097-BAE4-4088-9125-3F49ECE3E85C - eeb52b1cdb916c0c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kcHeroesMulti.Heros&gt;, Foundation.UUID, SwiftUI.NavigationLink&lt;kcHeroesMulti.HerosRowView, SwiftUI.Text&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.List&lt;Swift.Never, Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kcHeroesMulti.Heros&gt;, Foundation.UUID, SwiftUI.NavigationLink&lt;kcHeroesMulti.HerosRowView, SwiftUI.Text&gt;&gt;&gt;&gt; in kcHeroesMulti.HerosView.body.getter : some"
+                  moduleName = "kcHeroesMulti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aitor/Documents/0-REPOSITORIO%20GIT%20AITOR/kcHeroesMulti/kcHeroesMulti/kcHeroesMulti/Views/Principal/Heros/HerosView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  uuid = "CE0A6097-BAE4-4088-9125-3F49ECE3E85C - eeb52b1cdb916c0c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kcHeroesMulti.Heros&gt;, Foundation.UUID, SwiftUI.NavigationLink&lt;kcHeroesMulti.HerosRowView, SwiftUI.Text&gt;&gt;&gt; in closure #1 () -&gt; SwiftUI.List&lt;Swift.Never, Swift.Optional&lt;SwiftUI.ForEach&lt;Swift.Array&lt;kcHeroesMulti.Heros&gt;, Foundation.UUID, SwiftUI.NavigationLink&lt;kcHeroesMulti.HerosRowView, SwiftUI.Text&gt;&gt;&gt;&gt; in kcHeroesMulti.HerosView.body.getter : some"
+                  moduleName = "kcHeroesMulti"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aitor/Documents/0-REPOSITORIO%20GIT%20AITOR/kcHeroesMulti/kcHeroesMulti/kcHeroesMulti/Views/Principal/Heros/HerosView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "805">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8E707DD2-8E61-4F31-B792-87958B8D921B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "kcHeroesMulti/Views/Principal/PrincipalView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
