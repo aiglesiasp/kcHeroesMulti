@@ -8,15 +8,24 @@
 import SwiftUI
 
 struct PrincipalView: View {
-    var model: viewModelHeros = viewModelHeros()
+    var herosModel: viewModelHeros = viewModelHeros()
+    var developersModel: viewModelDevelopers = viewModelDevelopers()
+    
     var body: some View {
         TabView {
-            HerosView(viewModel: model)
+            HerosView(viewModel: herosModel)
                 .tabItem {
                     Image(systemName: "house")
                     Text("Heroes")
                 }
+            
+            DevelopersView(viewModel: developersModel)
+                .tabItem {
+                    Image(systemName: "house")
+                    Text("Developers")
+                }
         }
+        .accentColor(.orange)
     }
 }
 

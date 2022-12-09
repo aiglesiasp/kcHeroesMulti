@@ -18,9 +18,9 @@ final class viewModelDevelopers: ObservableObject {
     var suscriptors = Set<AnyCancellable>()
     
     //INIT
-    public init(testing: Bool = false) {
+    public init(testing: Bool = false, boot: [Bootcamp]=[]) {
         if testing {
-            getDeveloperDesing()
+            getDeveloperDesing(boot: boot)
         } else {
             getDevelopers()
         }
@@ -56,19 +56,27 @@ final class viewModelDevelopers: ObservableObject {
             .store(in: &suscriptors)
     }
     
+    //MARK: FUNCION LE DOY UN BOOTCAMO Y ME ENCUENTRA TODOS LOS DEVELOPERS
+    func getDevelopersOfBootcamp(id: String) -> [Developer] {
+        return developers!
+            .filter {
+                $0.bootcamp.id == id
+            }
+    }
+    
     //MARK: FUNCION GET DEVELOPERS DISEÑO
-    func getDeveloperDesing() {
+    func getDeveloperDesing(boot: [Bootcamp]) {
         //ME CREO EL BOOTCAMP
-        let b1 = Bootcamp(id: UUID().uuidString, name: "Bootcamp Mobile 14")
-        let b2 = Bootcamp(id: UUID().uuidString, name: "Bootcamp Mobile 15")
+        let b1 = Bootcamp(id: boot[0].id, name: boot[0].name)
+        let b2 = Bootcamp(id: boot[1].id, name: boot[1].name)
         //ME CREO EL DEVELOPER
-        let dev1 = Developer(bootcamp: b1, id: "100", apell1: "Iglesias", apell2: "Pubill", email: "", name: "Aitor", photo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fes-es%2Fbuscar%2Fpersona%2F&psig=AOvVaw25bhZrsvPH9OU7ZxXKmx1_&ust=1670673229120000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPjpoPS87PsCFQAAAAAdAAAAABAE", heros: [])
+        let dev1 = Developer(bootcamp: b1, id: "100", apell1: "Iglesias", apell2: "Pubill", email: "", name: "Aitor", photo: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", heros: [])
         
-        let dev2 = Developer(bootcamp: b1, id: "200", apell1: "Aguirre", apell2: "Lopez", email: "", name: "Antonio", photo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fes-es%2Fbuscar%2Fpersona%2F&psig=AOvVaw25bhZrsvPH9OU7ZxXKmx1_&ust=1670673229120000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPjpoPS87PsCFQAAAAAdAAAAABAE", heros: [])
+        let dev2 = Developer(bootcamp: b1, id: "200", apell1: "Aguirre", apell2: "Lopez", email: "", name: "Antonio", photo: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", heros: [])
         
-        let dev3 = Developer(bootcamp: b2, id: "300", apell1: "Manzano", apell2: "Hurtado", email: "", name: "Paco", photo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fes-es%2Fbuscar%2Fpersona%2F&psig=AOvVaw25bhZrsvPH9OU7ZxXKmx1_&ust=1670673229120000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPjpoPS87PsCFQAAAAAdAAAAABAE", heros: [])
+        let dev3 = Developer(bootcamp: b2, id: "300", apell1: "Manzano", apell2: "Hurtado", email: "", name: "Paco", photo: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", heros: [])
         
-        let dev4 = Developer(bootcamp: b2, id: "400", apell1: "Rodriguez", apell2: "Santano", email: "", name: "Ismael", photo: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fes-es%2Fbuscar%2Fpersona%2F&psig=AOvVaw25bhZrsvPH9OU7ZxXKmx1_&ust=1670673229120000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPjpoPS87PsCFQAAAAAdAAAAABAE", heros: [])
+        let dev4 = Developer(bootcamp: b2, id: "400", apell1: "Rodriguez", apell2: "Santano", email: "", name: "Ismael", photo: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", heros: [])
         
         self.developers = [dev1, dev2, dev3, dev4]
     }

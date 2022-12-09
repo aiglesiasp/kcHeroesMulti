@@ -20,3 +20,9 @@ struct Heros: Codable, Identifiable {
 struct HerosFilter: Codable {
     var name: String
 }
+
+
+//request like hero
+struct HeroLikeRequest: Codable {
+    var hero: String
+}

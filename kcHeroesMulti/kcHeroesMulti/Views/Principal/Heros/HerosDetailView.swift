@@ -23,8 +23,10 @@ struct HerosDetailView: View {
                         .bold()
                         .font(.title)
                     Spacer()
+                    //MARK: Boton me gusta
                     Button {
                         //TODO: action me gusta
+                        viewModelHeros.callToMeGusta(idHero: hero.id.uuidString)
                     } label: {
                         if (hero.favorite!) {
                             Image(systemName: "heart.circle")

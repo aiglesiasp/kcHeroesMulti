@@ -21,7 +21,7 @@ struct Developer: Codable, Identifiable {
 
 
 //MARK: - Bootcamp -
-struct Bootcamp: Codable{
+struct Bootcamp: Codable, Identifiable{
     let id: String
     let name: String
 }

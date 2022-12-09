@@ -25,11 +25,11 @@ enum endpoints: String {
     case herosList = "/api/heros/all"
     case developersList = "/api/data/developers"
     case bootcampsList = "/api/data/bootcamps" //no esta securizado
+    case like = "/api/data/herolike"
 }
 
 //CREO EL REQUEST A LAS LLAMADAS
 struct BaseNetwork {
-    
     
     //MARK: PARA GENERAR EL LOGIN
     func getSessionLogin(user: String, password: String) -> URLRequest {
@@ -96,6 +96,25 @@ struct BaseNetwork {
         var request = URLRequest(url: URL(string: urlCad)!)
         request.httpMethod = HTTPMethods.get
         request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
+        return request
+    }
+    
+    //MARK: FUNCION OBTENER LIKES
+    func getSessionLike(idHero: String) -> URLRequest {
+        //Montamos la cadena URL
+        let urlCad: String = "\(server)\(endpoints.like.rawValue)"
+        //Creamos la REQUEST
+        var request = URLRequest(url: URL(string: urlCad)!)
+        request.httpMethod = HTTPMethods.post
+        //Genero el JSON de la request
+        request.httpBody = try? JSONEncoder().encode(HeroLikeRequest(hero: idHero))
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
+        //Seguridad token
+        let token = loadKC(key: CONST_TOKEN_ID)
+        if let tokenJWT = token {
+            request.addValue("Bearer \(tokenJWT)", forHTTPHeaderField: "Authorization")
+        }
+        
         return request
     }
 }

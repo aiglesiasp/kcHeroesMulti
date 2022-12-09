@@ -13,6 +13,7 @@ public let CONST_TOKEN_ID = "tokenJWTKeyChainIOSSuperpoderes"
 final class RootViewModel: ObservableObject {
     //Propiedad estado
     @Published var status = Status.none
+    @Published var bootcamps: [Bootcamp]?
     //Creo el suscriptor porque voy a usar Combine
     private var suscriptors = Set<AnyCancellable>()
     
@@ -25,8 +26,16 @@ final class RootViewModel: ObservableObject {
     }
     
     //MARK: inicializador
-    init() {
+    init(testing: Bool = false) {
         self.logedUserControl()
+        
+        if(!testing) {
+            loadBootCamps()
+        } else {
+            //mockeo los bootcamps
+            loadBootCampsTesting()
+        }
+        
     }
     
     //MARK: funcion para comprobar token
@@ -97,6 +106,37 @@ final class RootViewModel: ObservableObject {
             }
             .store(in: &suscriptors)
 
+    }
+    
+    //MARK: FUNCION CARGAR BOOTCAMPS
+    func loadBootCamps() {
+        URLSession.shared
+            .dataTaskPublisher(for: BaseNetwork().getSessionBootcamps())
+            .tryMap {
+                guard let response = $0.response as? HTTPURLResponse,
+                      response.statusCode == 200 else {
+                    throw URLError(.badServerResponse)
+                }
+                //devolvemos la cadena porque es el token JWT
+                return $0.data
+            }
+            .decode(type: [Bootcamp].self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                print(completion)
+            } receiveValue: { data in
+                self.bootcamps = data
+            }
+            .store(in: &suscriptors)
+    }
+    
+    //MARK: FUNCION SIMULAR BOOTCAMPS
+    func loadBootCampsTesting() {
+        let b1 = Bootcamp(id: UUID().uuidString, name: "Mobile 11")
+        let b2 = Bootcamp(id: UUID().uuidString, name: "Mobile 12")
+        let b3 = Bootcamp(id: UUID().uuidString, name: "Mobile 13")
+        let b4 = Bootcamp(id: UUID().uuidString, name: "Mobile 14")
+        self.bootcamps = [b1, b2, b3, b4]
     }
     
 }

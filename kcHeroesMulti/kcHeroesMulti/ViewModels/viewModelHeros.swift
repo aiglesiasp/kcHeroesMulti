@@ -59,8 +59,45 @@ final class viewModelHeros: ObservableObject {
                 self.heros = data
             }
             .store(in: &suscriptors)
-
     }
+    
+    //MARK: FUNCION PARA AMRCAR DESMARCAR ME GUSTA
+    func callToMeGusta(idHero: String) {
+        URLSession.shared
+            .dataTaskPublisher(for: BaseNetwork().getSessionLike(idHero: idHero))
+            .tryMap {
+                guard let response = $0.response as? HTTPURLResponse,
+                      response.statusCode == 201 else {
+                    throw URLError(.badServerResponse)
+                }
+                //devolvemos los datos que es el JSON
+                return $0.data
+            }
+            .decode(type: String.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .replaceError(with: "ERROR: ")
+            .sink { data in
+                //Cambio favorito en memoria
+                if let offset = self.heros!.firstIndex(where: {$0.id.uuidString == idHero})
+                {
+                    self.heros![offset].favorite!.toggle()
+                }
+            }
+            .store(in: &suscriptors)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     //MARK: FUNCION PARA DATOS DE PRUEBA
     func getherosTesting() {
