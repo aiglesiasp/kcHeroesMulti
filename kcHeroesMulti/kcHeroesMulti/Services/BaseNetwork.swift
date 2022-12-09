@@ -23,6 +23,8 @@ struct HTTPMethods {
 enum endpoints: String {
     case login = "/api/auth/login"
     case herosList = "/api/heros/all"
+    case developersList = "/api/data/developers"
+    case bootcampsList = "/api/data/bootcamps" //no esta securizado
 }
 
 //CREO EL REQUEST A LAS LLAMADAS
@@ -67,6 +69,33 @@ struct BaseNetwork {
             request.addValue("Bearer \(tokenJWT)", forHTTPHeaderField: "Authorization")
         }
         
+        return request
+    }
+    
+    //MARK: FUNCION OBTENER DEVELOPERS
+    func getSessionDevelopers() -> URLRequest {
+        //Montamos la cadena URL
+        let urlCad: String = "\(server)\(endpoints.developersList.rawValue)"
+        //Creamos la REQUEST
+        var request = URLRequest(url: URL(string: urlCad)!)
+        request.httpMethod = HTTPMethods.get
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
+        //Seguridad token
+        let token = loadKC(key: CONST_TOKEN_ID)
+        if let tokenJWT = token {
+            request.addValue("Bearer \(tokenJWT)", forHTTPHeaderField: "Authorization")
+        }
+        return request
+    }
+    
+    //MARK: FUNCION OBTENER BOOTCAMPS
+    func getSessionBootcamps() -> URLRequest {
+        //Montamos la cadena URL
+        let urlCad: String = "\(server)\(endpoints.bootcampsList.rawValue)"
+        //Creamos la REQUEST
+        var request = URLRequest(url: URL(string: urlCad)!)
+        request.httpMethod = HTTPMethods.get
+        request.addValue(HTTPMethods.content, forHTTPHeaderField: "Content-type")
         return request
     }
 }
