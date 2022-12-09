@@ -20,7 +20,7 @@ struct HerosView: View {
                     ForEach(heros) { hero in
                         NavigationLink {
                             //Pantalla del detalle
-                            Text("\(hero.name)")
+                            HerosDetailView(hero: hero, viewModelHeros: viewModel)
                         } label: {
                             //Detalle de la row
                             HerosRowView(hero: hero)

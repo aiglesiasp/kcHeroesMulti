@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0192112942D04E00811EEB /* HerosDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0192102942D04E00811EEB /* HerosDetailView.swift */; };
 		5B124AAB29427E6900C993B7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B124AAA29427E6900C993B7 /* KeychainSwift */; };
 		5B577E50294277480050E8CA /* rootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F82940D13100FAA323 /* rootView.swift */; };
 		5B577E51294277490050E8CA /* rootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF770F82940D13100FAA323 /* rootView.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B0192102942D04E00811EEB /* HerosDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosDetailView.swift; sourceTree = "<group>"; };
 		5BF77060293E79E900FAA323 /* kcHeroesMulti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kcHeroesMulti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF77063293E79E900FAA323 /* kcHeroesMultiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kcHeroesMultiApp.swift; sourceTree = "<group>"; };
 		5BF77065293E79E900FAA323 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 			children = (
 				5BF771072941131A00FAA323 /* HerosView.swift */,
 				5BF771092941143900FAA323 /* HerosRowView.swift */,
+				5B0192102942D04E00811EEB /* HerosDetailView.swift */,
 			);
 			path = Heros;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				5BF7710529410FDF00FAA323 /* viewModelHeros.swift in Sources */,
 				5BF770F72940CD1200FAA323 /* PropertyWrappers.swift in Sources */,
 				5BF770FE2940D71D00FAA323 /* ErrorView.swift in Sources */,
+				5B0192112942D04E00811EEB /* HerosDetailView.swift in Sources */,
 				5BF77066293E79E900FAA323 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
