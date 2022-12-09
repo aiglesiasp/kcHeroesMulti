@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct PrincipalView: View {
+    var model: viewModelHeros = viewModelHeros()
     var body: some View {
         TabView {
-            HerosView(viewModel: viewModelHeros())
+            HerosView(viewModel: model)
                 .tabItem {
                     Image(systemName: "house")
                     Text("Heroes")

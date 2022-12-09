@@ -63,6 +63,12 @@ final class RootViewModel: ObservableObject {
     }
      */
     
+    //MARK: FUNCION CERRAR SESSION
+    func closeSession() {
+        self.tokenJWT = ""
+        self.status = .none //va al login
+    }
+    
     
     //MARK: LOGIN AL SERVIDOR
     func login(user: String, password: String) {

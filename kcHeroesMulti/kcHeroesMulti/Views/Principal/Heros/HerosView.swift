@@ -10,9 +10,11 @@ import SwiftUI
 struct HerosView: View {
     @StateObject var viewModel: viewModelHeros
     @State private var filter: String = ""
+    //Capturar el ENVIRONMENT DEL VIEWMODEL
+   @EnvironmentObject var rootViewModel: RootViewModel
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 if let heros = viewModel.heros {
                     ForEach(heros) { hero in
@@ -32,6 +34,24 @@ struct HerosView: View {
                 viewModel.getHeros(filter: newValue)
                 //print("filtro: \(newValue)")
             })
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        //TODO: cerrar sesion
+                        rootViewModel.closeSession()
+                    } label: {
+                        HStack {
+                            Image(systemName: "xmark.circle")
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                            Text("Close Session")
+                                .font(.caption)
+                                .foregroundColor(.blue)
+                        }
+                    }
+
+                }
+            }
             .onDisappear{
                 //hacer algo cuando se acaba la pantalla
             }
