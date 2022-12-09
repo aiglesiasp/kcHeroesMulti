@@ -10,6 +10,7 @@ import SwiftUI
 struct DevelopersView: View {
     @StateObject var viewModel: viewModelDevelopers
     @EnvironmentObject var viewmodelRoot: RootViewModel
+    @State private var selectedKC: Developer? = nil //guardo el de 2 taps
     
     var body: some View {
         ScrollView {
@@ -34,6 +35,9 @@ struct DevelopersView: View {
                                 HStack {
                                     ForEach(dataFIlter) { developer in
                                         DevelopersRowView(data: developer)
+                                            .onTapGesture(count: 2) {
+                                                selectedKC = developer
+                                            }
                                     }
                                 }
                             }
@@ -44,8 +48,10 @@ struct DevelopersView: View {
             } else {
                 Text("Sin datos")
             }
-            //Step2. Developers of bootcamp
-            
+        }
+        .sheet(item: self.$selectedKC) { developer in
+            //TODO: abro modal
+            FavoriteDevelopersView(data: developer)
         }
     }
 }
