@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HerosView: View {
     @StateObject var viewModel: viewModelHeros
+    @State private var filter: String = ""
     
     var body: some View {
         NavigationView {
@@ -25,6 +26,17 @@ struct HerosView: View {
 
                     }
                 }
+            }
+            .searchable(text: $filter, prompt: "Buscar un heroe...")
+            .onChange(of: filter, perform: { newValue in
+                viewModel.getHeros(filter: newValue)
+                //print("filtro: \(newValue)")
+            })
+            .onDisappear{
+                //hacer algo cuando se acaba la pantalla
+            }
+            .onAppear{
+                //Ejemplo: llamar a un metodo del viewModel antes de cargar la vista
             }
         }
     }
